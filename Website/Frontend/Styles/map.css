@@ -1,0 +1,149 @@
+﻿body 
+{
+    background:url(/frontend/images/detail-banner.jpg) no-repeat !important;
+    background-size:100% auto;
+    background-attachment:fixed !important;
+    color:#555;
+}
+
+/*------------------------------------------
+---------------CONTENT-------------------
+------------------------------------------*/
+
+#content 
+{
+    margin-top:30px;
+    margin-bottom:30px;
+    width:100%;
+    background:#fff;
+}
+
+
+    #content #left-content 
+    {
+        width:640px;
+        padding:20px 30px;
+        float:left;
+    }
+
+
+    #content  #right-content 
+    {
+        float:left;
+        width:230px;
+        padding:54px 30px 0 0;
+    }
+
+/*--------------TOP HEADING---------------
+----------------------------------------------*/
+
+.top-heading
+{
+    margin-top:15px;
+    border-bottom:1px solid #BFBFBF;
+    padding-bottom:20px;
+}
+
+.top-heading h1
+{
+    font-size:27px;
+    color:#000;
+    text-transform:uppercase;
+    font-weight:normal;
+    margin-bottom:15px;
+}
+
+.top-heading .teaster 
+{
+    font-size:13px;
+    font-style:italic;
+    color:#333;
+    line-height:22px;
+}
+
+/*--------------CONTACT SECTION---------------
+----------------------------------------------*/
+
+#interactive-map {
+    margin-top:25px;
+}
+
+
+/*--------------RECOMMEND SECTION---------------
+----------------------------------------------*/
+
+.recommend-section 
+{
+    background:url(/frontend/images/news-border-top.png) repeat-x top left;
+    padding-top:30px;
+    margin-top:50px;
+}
+
+    .recommend-section .recommend-title 
+    {
+        font-size:17px;
+        color:#3e454c;
+        text-transform:uppercase;
+        margin-bottom:30px;
+    }
+
+    .recommend-section .other-places-section 
+    {
+        width:320px;
+        float:left;
+        margin-bottom:30px;
+    }
+
+.other-places-section .other-pics {
+    float:left;
+    position:relative;
+}
+
+    .other-places-section .other-pics .img-shadow 
+    {
+        background:url(/frontend/images/img-shadow.png) no-repeat top left;
+        width:100px;
+        height:7px;
+        position:absolute;
+        bottom:-3px;
+        left:0px;
+    }
+
+    .other-places-section .other-pics img{
+        width:90px;
+        height:90px;
+        border:5px solid #eee;
+        margin-right:15px;
+    }
+
+
+
+.other-places-section .right-detail 
+{
+    float:left;
+    width:190px;
+}
+
+.other-places-section .other-places-title 
+{
+    color:#3e454c;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+    display:block;
+}
+
+    .other-places-section .other-places-title:hover {
+        text-decoration:none;
+    }
+
+.other-places-section p 
+{
+    font-size:11px;
+    margin-bottom:10px;
+}
+
+
+.updated {
+    margin-right:30px;
+}

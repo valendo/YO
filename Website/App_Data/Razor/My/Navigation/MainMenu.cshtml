@@ -1,0 +1,76 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get  { return "Show main menu"; }
+    }
+
+    [FunctionParameter(Label = "Place Detail Page")]
+    public DataReference<IPage> PlaceDetailPage { get; set; }
+
+    public static string GetUrlFromTitle(string title)
+    {
+        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        var generated = new System.Text.StringBuilder();
+
+        foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
+        {
+            generated.Append(c);
+        }
+
+        var url = generated.ToString().Replace(" ", "-");
+
+        return url.ToLower();
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    </head>
+    <body>
+        @{
+            var menus = Data.Get<My.Navigation.MainMenu>().OrderBy(t => t.Order).ToList();
+            var areas = Data.Get<My.Content.PlaceArea>().OrderBy(t => t.Order).ToList();
+        }
+        <ul class="top-menu">
+            @foreach (var menu in menus)
+            {
+                IPage p = Data.Get<IPage>().Where(t => t.Id == menu.Page).SingleOrDefault();
+                string url = "#";
+                if (string.IsNullOrEmpty(menu.SubName))
+                {
+                    url = Html.C1().PageUrl(p).ToString();
+                }
+                <li class="top-li @(!string.IsNullOrEmpty(menu.SubName) ? "has-sub" : "")"><a href="@url" class="top-a">@p.MenuTitle</a>
+                    @if (menu.SubName == "place")
+	                {
+		                <div class="sub-menu">
+                            <ul class="sub-menu-board clearfix">
+                                @foreach (var area in areas)
+                                {
+                                    <li class="column-menu">
+                                        <span>@area.Title</span>
+                                        @{
+                                            var places = Data.Get<My.Content.Place>().Where(t => t.Area == area.Id).ToList();    
+                                        }
+                                        @if (places.Count > 0)
+	                                    {
+                                            <ul class="small-list-menu">
+                                                @foreach (var place in places)
+	                                            {
+                                                    <li class="sub-li"><a href="@Html.C1().PageUrl(PlaceDetailPage.Data)/@GetUrlFromTitle(area.Title)/@GetUrlFromTitle(place.Title)">@place.Title</a></li>
+	                                            }
+                                            </ul>
+	                                    }
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+	                }
+                </li>
+            }
+            <div style="clear: both;"></div>
+        </ul>
+    </body>
+</html>

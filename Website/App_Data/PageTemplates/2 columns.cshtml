@@ -1,0 +1,38 @@
+@inherits RazorPageTemplate
+
+@functions {
+    public override void Configure()
+    {
+        TemplateId = new Guid("ced5566a-1927-4f72-bc58-862914beddcb");
+        TemplateTitle = "2 columns";
+        Layout = "MasterLayout.cshtml";
+    }
+
+    [Placeholder(Id = "content", IsDefault = true)]
+    public XhtmlDocument Content { get; set; }
+
+    [Placeholder(Id = "aside")]
+    public XhtmlDocument Aside { get; set; }
+
+	}
+@{
+    Layout = "MasterLayout.cshtml";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="/Frontend/Styles/contact.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="content" class="clearfix">
+        <div id="left-content">
+            @Markup(Content)
+        </div>
+        <!--END LEFT CONTENT-->
+        <div id="right-content">
+            @Markup(Aside)
+        </div>
+        <!--END RIGHT CONTENT-->
+    </div>
+    <!--END CONTENT-->
+</body>
+</html>

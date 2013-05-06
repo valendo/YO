@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormData>
+  <ContainerLabel value="Place" />
+  <FormDefinition value="&lt;cms:formdefinition xmlns:cms=&quot;http://www.composite.net/ns/management/bindingforms/1.0&quot; xmlns=&quot;http://www.composite.net/ns/management/bindingforms/std.ui.controls.lib/1.0&quot; xmlns:ff=&quot;http://www.composite.net/ns/management/bindingforms/std.function.lib/1.0&quot; xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot;&gt;&#xD;&#xA;  &lt;cms:bindings&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Id&quot; type=&quot;System.Guid&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Title&quot; type=&quot;System.String&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Area&quot; type=&quot;System.Guid&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Teaser&quot; type=&quot;System.String&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Content&quot; type=&quot;System.String&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Gallery&quot; type=&quot;System.String&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;CultureName&quot; type=&quot;System.String&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;SourceCultureName&quot; type=&quot;System.String&quot; optional=&quot;true&quot; /&gt;&#xD;&#xA;  &lt;/cms:bindings&gt;&#xD;&#xA;  &lt;cms:layout iconhandle=&quot;generated-type-data-edit&quot; label=&quot;Da Nang&quot;&gt;&#xD;&#xA;    &lt;FieldGroup&gt;&#xD;&#xA;      &lt;TextBox Label=&quot;Title&quot; Help=&quot;&quot; SpellCheck=&quot;true&quot;&gt;&#xD;&#xA;        &lt;TextBox.Text&gt;&#xD;&#xA;          &lt;cms:bind source=&quot;Title&quot; /&gt;&#xD;&#xA;        &lt;/TextBox.Text&gt;&#xD;&#xA;      &lt;/TextBox&gt;&#xD;&#xA;      &lt;KeySelector Label=&quot;Area&quot; Help=&quot;&quot; OptionsKeyField=&quot;Key&quot; OptionsLabelField=&quot;Label&quot; Required=&quot;true&quot;&gt;&#xD;&#xA;        &lt;KeySelector.Selected&gt;&#xD;&#xA;          &lt;cms:bind source=&quot;Area&quot; /&gt;&#xD;&#xA;        &lt;/KeySelector.Selected&gt;&#xD;&#xA;        &lt;KeySelector.Options&gt;&#xD;&#xA;          &lt;ff:StaticMethodCall Type=&quot;&amp;lt;t n=&amp;quot;Composite.Plugins.Functions.WidgetFunctionProviders.StandardWidgetFunctionProvider.DataReference.DataReferenceSelectorWidgetFunction`1, Composite, Version=4.0.4849.17239, Culture=neutral, PublicKeyToken=null&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;t n=&amp;quot;My.Content.PlaceArea&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/t&amp;gt;&quot; Method=&quot;GetOptions&quot; Parameters=&quot;My.Content.PlaceArea&quot; /&gt;&#xD;&#xA;        &lt;/KeySelector.Options&gt;&#xD;&#xA;      &lt;/KeySelector&gt;&#xD;&#xA;      &lt;TextArea Label=&quot;Teaser&quot; Help=&quot;&quot; SpellCheck=&quot;true&quot;&gt;&#xD;&#xA;        &lt;TextArea.Text&gt;&#xD;&#xA;          &lt;cms:bind source=&quot;Teaser&quot; /&gt;&#xD;&#xA;        &lt;/TextArea.Text&gt;&#xD;&#xA;      &lt;/TextArea&gt;&#xD;&#xA;      &lt;InlineXhtmlEditor Label=&quot;Content&quot; Help=&quot;&quot; ClassConfigurationName=&quot;common&quot;&gt;&#xD;&#xA;        &lt;InlineXhtmlEditor.Xhtml&gt;&#xD;&#xA;          &lt;cms:bind source=&quot;Content&quot; /&gt;&#xD;&#xA;        &lt;/InlineXhtmlEditor.Xhtml&gt;&#xD;&#xA;      &lt;/InlineXhtmlEditor&gt;&#xD;&#xA;      &lt;MultiKeySelector Label=&quot;Gallery&quot; Help=&quot;&quot; OptionsKeyField=&quot;Key&quot; OptionsLabelField=&quot;Label&quot; Required=&quot;false&quot; CompactMode=&quot;true&quot;&gt;&#xD;&#xA;        &lt;MultiKeySelector.SelectedAsString&gt;&#xD;&#xA;          &lt;cms:bind source=&quot;Gallery&quot; /&gt;&#xD;&#xA;        &lt;/MultiKeySelector.SelectedAsString&gt;&#xD;&#xA;        &lt;MultiKeySelector.Options&gt;&#xD;&#xA;          &lt;ff:StaticMethodCall Type=&quot;Composite.Plugins.Functions.WidgetFunctionProviders.StandardWidgetFunctionProvider.String.DataIdMultiSelectorWidgetFunction,Composite&quot; Method=&quot;GetOptions&quot; Parameters=&quot;Composite.Data.Types.IMediaFileFolder,Composite&quot; /&gt;&#xD;&#xA;        &lt;/MultiKeySelector.Options&gt;&#xD;&#xA;      &lt;/MultiKeySelector&gt;&#xD;&#xA;    &lt;/FieldGroup&gt;&#xD;&#xA;  &lt;/cms:layout&gt;&#xD;&#xA;&lt;/cms:formdefinition&gt;" />
+  <CustomToolbarDefinition />
+  <ContainerType>
+    <SerializerHandler value="SerializerHandlerType='Composite\.C1Console\.Actions\.StandardUiContainerTypesSerializerHandler,Composite'SerializedObject='Document'" />
+  </ContainerType>
+  <Bindings>
+    <Dictionary type="&lt;t n=&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;  &lt;t n=&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Id" />
+        </Key>
+        <Value>
+          <Value type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="6a5f5e48-c043-48ea-b847-d2d68ee37b9d" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Title" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Da Nang" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Area" />
+        </Key>
+        <Value>
+          <Value type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="aeb15582-d4e4-40d7-b692-c2ebed0f5fa4" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Teaser" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Nulla neque quam, luctus at sagittis non, pulvinar sit amet lorem. Integer ultrices tristique ligula, tincidunt egestas libero consectetur ut. Cras vel felis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer aliquam facilisis risus sit amet bibendum. Aenean a odio nisi, eu tempus nisi. Aliquam id risus felis, in fringilla turpis. Morbi eget arcu eu turpis tempus pretium. Maecenas non urna risus, a dapibus odio. Ut bibendum tempus est in malesuada. Vivamus purus lacus, molestie vel feugiat vel, iaculis porta est. Integer ac tellus sit amet sem lobortis viverra et at urna. Sed ac leo vel est porttitor convallis." />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Content" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xA;&#x9;&lt;head&gt;&lt;/head&gt;&#xA;&#x9;&lt;body&gt;&#xA;&#xA;&lt;p&gt;When to go ?&lt;br /&gt;Orci ullamcorper vestibulum interdum, mauris eros cursus turpis, vel tempus est enim ac enim. Donec eget nunc sed lorem feugiat placerat convallis id odio. Nunc luctus enim eget eros rutrum elementum. Quisque congue imperdiet elit, ac blandit dui condimentum et. Praesent molestie tellus eleifend mauris consequat eu tristique sem fringilla. Duis lobortis odio interdum sem euismod pellentesque. Vivamus est elit, posuere in tristique eget, imperdiet quis dui. Vivamus a elit at libero ultrices mollis. In hac habitasse platea dictumst. Nam varius viverra bibendum.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;br /&gt;Weather :&lt;br /&gt;Vulputate euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec quis diam non enim tincidunt luctus quis vitae mi. Fusce et velit nibh, et aliquet mauris. Fusce eu consequat lectus. Nam in ante urna. Proin a elit sit amet nisl venenatis laoreet congue quis massa. Nunc vehicula aliquet porttitor. Integer porttitor ultrices risus sit amet feugiat. Nullam gravida dapibus nunc id semper. Nullam sed scelerisque metus. Quisque nec enim purus, quis suscipit ipsum.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Food :&lt;br /&gt;Nisl ut purus luctus hendrerit. Integer vestibulum, est at scelerisque luctus, risus nibh condimentum ligula, in convallis metus orci quis orci. Maecenas in ipsum lorem, eu blandit diam.&lt;/p&gt;&#xA;&#xA;&#x9;&lt;/body&gt;&#xA;&lt;/html&gt;" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Gallery" />
+        </Key>
+        <Value>
+          <Null />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="CultureName" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="vi-VN" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="SourceCultureName" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="vi-VN" />
+        </Value>
+      </KeyPair>
+    </Dictionary>
+  </Bindings>
+  <BindingsValidationRules>
+    <Dictionary type="&lt;t n=&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;  &lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;    &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;  &lt;/t&gt;&#xD;&#xA;&lt;/t&gt;">
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Id" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+            <SerializerHandler value="SerializerHandlerType='Composite\.Data\.Validation\.ClientValidationRuleSerializerHandler,Composite'SerializedObject='AAEAAAD/////AQAAAAAAAAAMAgAAAEdDb21wb3NpdGUsIFZlcnNpb249NC4wLjQ4NDkuMTcyMzksIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAS0NvbXBvc2l0ZS5EYXRhLlZhbGlkYXRpb24uQ2xpZW50VmFsaWRhdGlvblJ1bGVzLk5vdE51bGxDbGllbnRWYWxpZGF0aW9uUnVsZQAAAAACAAAACw=='" />
+          </List>
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Title" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+            <SerializerHandler value="SerializerHandlerType='Composite\.Data\.Validation\.ClientValidationRuleSerializerHandler,Composite'SerializedObject='AAEAAAD/////AQAAAAAAAAAMAgAAAEdDb21wb3NpdGUsIFZlcnNpb249NC4wLjQ4NDkuMTcyMzksIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAS0NvbXBvc2l0ZS5EYXRhLlZhbGlkYXRpb24uQ2xpZW50VmFsaWRhdGlvblJ1bGVzLk5vdE51bGxDbGllbnRWYWxpZGF0aW9uUnVsZQAAAAACAAAACw=='" />
+          </List>
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Area" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+            <SerializerHandler value="SerializerHandlerType='Composite\.Data\.Validation\.ClientValidationRuleSerializerHandler,Composite'SerializedObject='AAEAAAD/////AQAAAAAAAAAMAgAAAEdDb21wb3NpdGUsIFZlcnNpb249NC4wLjQ4NDkuMTcyMzksIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAS0NvbXBvc2l0ZS5EYXRhLlZhbGlkYXRpb24uQ2xpZW50VmFsaWRhdGlvblJ1bGVzLk5vdE51bGxDbGllbnRWYWxpZGF0aW9uUnVsZQAAAAACAAAACw=='" />
+          </List>
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Teaser" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Content" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Gallery" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="CultureName" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+            <SerializerHandler value="SerializerHandlerType='Composite\.Data\.Validation\.ClientValidationRuleSerializerHandler,Composite'SerializedObject='AAEAAAD/////AQAAAAAAAAAMAgAAAEdDb21wb3NpdGUsIFZlcnNpb249NC4wLjQ4NDkuMTcyMzksIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAS0NvbXBvc2l0ZS5EYXRhLlZhbGlkYXRpb24uQ2xpZW50VmFsaWRhdGlvblJ1bGVzLk5vdE51bGxDbGllbnRWYWxpZGF0aW9uUnVsZQAAAAACAAAACw=='" />
+          </List>
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="SourceCultureName" />
+        </Key>
+        <Value>
+          <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+            <SerializerHandler value="SerializerHandlerType='Composite\.Data\.Validation\.ClientValidationRuleSerializerHandler,Composite'SerializedObject='AAEAAAD/////AQAAAAAAAAAMAgAAAEdDb21wb3NpdGUsIFZlcnNpb249NC4wLjQ4NDkuMTcyMzksIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAS0NvbXBvc2l0ZS5EYXRhLlZhbGlkYXRpb24uQ2xpZW50VmFsaWRhdGlvblJ1bGVzLk5vdE51bGxDbGllbnRWYWxpZGF0aW9uUnVsZQAAAAACAAAACw=='" />
+          </List>
+        </Value>
+      </KeyPair>
+    </Dictionary>
+  </BindingsValidationRules>
+  <ExcludedEvents>
+    <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="SaveAndPublish" />
+    </List>
+  </ExcludedEvents>
+</FormData>

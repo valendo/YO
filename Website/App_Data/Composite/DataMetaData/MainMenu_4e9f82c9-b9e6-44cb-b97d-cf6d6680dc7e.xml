@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDescriptor dataTypeId="4e9f82c9-b9e6-44cb-b97d-cf6d6680dc7e" name="MainMenu" namespace="My.Navigation" title="Main menu" hasCustomPhysicalSortOrder="false" isCodeGenerated="true" cachable="false" labelFieldName="Page" typeManagerTypeName="My.Navigation.MainMenu">
+  <DataAssociations />
+  <DataScopes>
+    <DataScopeIdentifier name="public" />
+  </DataScopes>
+  <KeyPropertyNames>
+    <KeyPropertyName name="Id" />
+  </KeyPropertyNames>
+  <SuperInterfaces>
+    <SuperInterface type="Composite.Data.ProcessControlled.IProcessControlled,Composite" />
+    <SuperInterface type="Composite.Data.ProcessControlled.ILocalizedControlled,Composite" />
+  </SuperInterfaces>
+  <Fields>
+    <DataFieldDescriptor id="ba61dfcb-8f0d-4407-b059-01e69905222d" name="Id" isNullable="false" position="-1" groupByPriority="0" inherited="false" instanceType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='Guid'" isReadOnly="false">
+      <FormRenderingProfile />
+      <ValidationFunctionMarkups />
+    </DataFieldDescriptor>
+    <DataFieldDescriptor id="67f5eae8-ddcd-40df-a6be-6848785784b4" name="Page" isNullable="false" position="0" groupByPriority="0" inherited="false" instanceType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='Guid'" isReadOnly="false" defaultValue="ValueType='Guid'Value='00000000-0000-0000-0000-000000000000'" foreignKeyReferenceTypeName="Composite.Data.Types.IPage,Composite">
+      <FormRenderingProfile label="Page" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.DataReference.PageSelector&quot; /&gt;" />
+      <ValidationFunctionMarkups />
+    </DataFieldDescriptor>
+    <DataFieldDescriptor id="4417b303-56e6-48bd-87e9-1eda26490ad3" name="SubName" isNullable="true" position="1" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='String'Length='64'" isReadOnly="false">
+      <FormRenderingProfile label="Sub Name" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.String.TextBox&quot; /&gt;" />
+    </DataFieldDescriptor>
+    <DataFieldDescriptor id="f1405f5d-7c2a-4463-9304-97af3668b714" name="Order" isNullable="true" position="2" groupByPriority="0" inherited="false" instanceType="&lt;t n=&quot;System.Nullable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" storeType="PhysicalStoreType='Integer'" isReadOnly="false">
+      <FormRenderingProfile label="Order" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.Integer.TextBox&quot; /&gt;" />
+      <TreeOrderingProfile orderPriority="1" orderDescending="false" />
+      <ValidationFunctionMarkups />
+    </DataFieldDescriptor>
+  </Fields>
+</DataTypeDescriptor>

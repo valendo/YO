@@ -1,0 +1,104 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "Show information aside place"; }
+    }
+
+    [FunctionParameter(Label = "Place Detail Page")]
+    public DataReference<IPage> PlaceDetailPage { get; set; }
+    
+    string PathInfoString(int segment)
+    {
+        string pathInfo = Composite.Core.Routing.Pages.C1PageRoute.GetPathInfo() ?? string.Empty;
+        string[] segments = pathInfo.Split('/');
+        return segments.Skip(segment + 1).FirstOrDefault();
+    }
+
+    public static string GetUrlFromTitle(string title)
+    {
+        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        var generated = new System.Text.StringBuilder();
+
+        foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
+        {
+            generated.Append(c);
+        }
+
+        var url = generated.ToString().Replace(" ", "-");
+
+        return url.ToLower();
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="/frontend/scripts/fancybox/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="/frontend/styles/places-detail.css" rel="stylesheet" />
+    <link href="/frontend/styles/header-footer.css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="/frontend/scripts/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="/frontend/scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script src="/frontend/scripts/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#accordion-menu").accordion();
+        });
+
+        $(function () {
+            $("a.fancybox").fancybox({
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic'
+            });
+        });
+    </script>
+</head>
+<body>
+    @{
+        Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
+        string currentArea = PathInfoString(0);
+        Guid areaId = Data.Get<My.Content.PlaceArea>().Where(t => GetUrlFromTitle(t.Title) == currentArea).SingleOrDefault().Id;
+        string title = PathInfoString(1);
+        var currentPlace = Data.Get<My.Content.Place>().Where(t => t.Area == areaId && GetUrlFromTitle(t.Title) == title).SingleOrDefault();
+        var folder = Data.Get<IMediaFileFolder>().Where(t => t.KeyPath == currentPlace.Gallery).SingleOrDefault();
+        var areas = Data.Get<My.Content.PlaceArea>().OrderBy(t => t.Order).ToList();
+    }
+    <ul id="accordion-menu">
+        @foreach (var area in areas)
+        {
+            <li class="northern first-li">
+                <a href="" class="area areaActive">@area.Title
+                                <span class="vertical-icon"></span>
+                </a>
+                @{
+                    var places = Data.Get<My.Content.Place>().Where(t => t.Area == area.Id).ToList();    
+                }
+                @if (places.Count > 0)
+                {
+                    <ul class="sub-accordion-menu">
+                        @foreach (var place in places)
+	                    {
+                            <li><a href="@Html.C1().PageUrl(PlaceDetailPage.Data)/@GetUrlFromTitle(area.Title)/@GetUrlFromTitle(place.Title)" class="destination">@place.Title</a></li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+    <div class="destination-img">
+        @if (folder != null)
+        {
+            foreach (var file in Data.Get<IImageFile>().Where(t => t.FolderPath == folder.Path))
+            {
+                <a href="@Html.C1().MediaUrl(file)" class="fancybox" rel="danang">
+                    <img src="@Html.C1().MediaUrl(file)" width="230" />
+                </a>
+            }
+        }
+    </div>
+</body>
+</html>

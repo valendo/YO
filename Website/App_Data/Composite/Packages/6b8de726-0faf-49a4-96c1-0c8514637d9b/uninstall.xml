@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageInstaller xmlns="http://www.composite.net/ns/management/packageinstaller/1.0">
+  <PackageFragmentUninstallers>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller,Composite">
+      <Files xmlns="">
+        <File filename="~\App_Data\PageTemplates\Frontpage.cshtml" />
+        <File filename="~\App_Data\PageTemplates\MasterLayout.cshtml" />
+        <File filename="~\App_Data\PageTemplates\OneColumnFullWidth.cshtml" />
+        <File filename="~\App_Data\PageTemplates\ThreeColumns.cshtml" />
+        <File filename="~\App_Data\PageTemplates\TwoColumnsContentAside.cshtml" />
+        <File filename="~\App_Data\PageTemplates\TwoColumnsNavigationContent.cshtml" />
+      </Files>
+    </Add>
+  </PackageFragmentUninstallers>
+</PackageInstaller>

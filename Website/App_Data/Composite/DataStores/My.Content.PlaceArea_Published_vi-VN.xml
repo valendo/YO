@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlaceAreaElements>
+  <PlaceArea Id="4bbad6eb-f0c4-4f06-bc93-f958ca1c3224" Title="South places" CultureName="vi-VN" SourceCultureName="vi-VN" Order="3" />
+  <PlaceArea Id="aeb15582-d4e4-40d7-b692-c2ebed0f5fa4" Title="Central places" CultureName="vi-VN" SourceCultureName="vi-VN" Order="2" />
+  <PlaceArea Id="ec393149-8130-414a-bd3e-bb42daaf8b68" Title="Northern places" CultureName="vi-VN" SourceCultureName="vi-VN" Order="1" />
+</PlaceAreaElements>

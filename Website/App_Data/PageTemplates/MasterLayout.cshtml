@@ -1,0 +1,66 @@
+﻿@inherits CompositeC1WebPage
+
+@{
+    var stylesFolder = "/Frontend/Styles";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@CurrentPageNode.Title</title>
+
+    <link href="@Href(stylesFolder)/homepage.css" rel="stylesheet" />
+    <link href="@Href(stylesFolder)/header-footer.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/frontend/scripts/general.js"></script>
+
+    @if (!string.IsNullOrEmpty(CurrentPageNode.Description))
+    {
+        <meta name="Description" content="@CurrentPageNode.Description"/>
+    }
+    <f:function xmlns:f="http://www.composite.net/ns/function/1.0" name="Composite.Web.Html.Template.CommonMetaTags">
+		<f:param name="Designer" value="Composite C1 starter site" />
+	</f:function>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top">
+            @PageTemplateFeature("Header")
+            <!--END HEADER-->
+            <div class="header-shadow"></div>
+        </div>
+        <!--END TOP-->
+
+        @RenderBody()
+
+        <div id="footer">
+            <div class="footer-section" id="copyright">
+                <p>©2012  YO VIETNAM . All rights reserved.</p>
+            </div>
+
+            <div class="footer-section" id="footer-logo">
+                <a href="yo-homepage.html">
+                    <img src="/frontend/images/logo-footer.png" /></a>
+            </div>
+
+            <div class="footer-section" id="contactus">
+                <div id="social-places">
+                    <a href="" class="fb-icon"></a>
+                    <a href="" class="twitter-icon"></a>
+                </div>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <div style="clear: both;"></div>
+                </ul>
+                <div style="clear: both;"></div>
+            </div>
+            <!--END FOOTERSECTION-->
+            <div style="clear: both;"></div>
+        </div>
+        <!--END FOOTER-->
+    </div>
+    <!--END WRAPPER-->
+
+</body>
+</html>

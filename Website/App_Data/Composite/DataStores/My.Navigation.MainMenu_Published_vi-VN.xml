@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MainMenuElements>
+  <MainMenu Id="4101c0f4-6e77-4d77-bbb8-cec5d1e6874c" Page="a3055286-0e90-4b04-99dd-fb1a61dde0bf" Order="1" CultureName="vi-VN" SourceCultureName="vi-VN" />
+  <MainMenu Id="5185e832-8a27-464f-bc1d-e9f024a725e7" Page="25a3bc19-6b02-4de3-bf8d-b5c397014482" Order="3" CultureName="vi-VN" SourceCultureName="vi-VN" />
+  <MainMenu Id="65fd77e9-7da6-4734-8d00-8907926df42c" Page="cd96c336-fb0e-48bb-a6af-0a197e33998b" Order="5" CultureName="vi-VN" SourceCultureName="vi-VN" />
+  <MainMenu Id="6a74e79a-8b7d-452d-a2b9-7eb4420d6920" Page="f0d02685-4c99-4b59-91ab-a5d3af63cda2" CultureName="vi-VN" SourceCultureName="vi-VN" Order="6" />
+  <MainMenu Id="dcdca127-e2b0-4abc-91a3-cd876f0562d8" Page="3bf695b1-6d24-4c61-b532-fd09a6b8fcae" Order="2" CultureName="vi-VN" SourceCultureName="vi-VN" SubName="place" />
+  <MainMenu Id="fc505a1c-9923-4a5b-893e-da1f6c02c4be" Page="a4e6e61b-7e82-4ea9-8824-3ffb126f33d3" Order="4" CultureName="vi-VN" SourceCultureName="vi-VN" />
+</MainMenuElements>

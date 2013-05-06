@@ -1,0 +1,102 @@
+﻿20130506 10:49:48.9070 2 15 Information Composite.Core.WebClient.Setup.SetupService  Setup complete. Enjoy!
+20130506 10:49:49.1121 2 18 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 2 ended at 10:49:49:11 in process 5800
+20130506 11:15:32.2833 3 49 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 3 ended at 11:15:32:28 in process 5800
+20130506 11:25:21.2050 4 66 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 4 ended at 11:25:21:20 in process 5800
+20130506 11:35:49.5929 5 15 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 5 ended at 11:35:49:59 in process 5800
+20130506 11:38:54.5285 6 18 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 6 ended at 11:38:54:52 in process 5800
+20130506 13:41:35.8306 7 81 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 7 ended at 13:41:35:82 in process 5800
+20130506 13:44:04.1971 8 66 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 8 ended at 13:44:04:19 in process 5800
+20130506 13:45:37.1554 9 18 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 9 ended at 13:45:37:15 in process 5800
+20130506 13:46:40.9850 10 81 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 10 ended at 13:46:40:98 in process 5800
+20130506 13:46:41.4490 10 53 Critical GlobalInitializerFacade  BinDirChangeOrDirectoryRename
+20130506 13:46:41.5351 10 53 Critical GlobalInitializerFacade  System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Web.Compilation.BuildManager.BatchCompileWebDirectoryInternal(VirtualDirectory vdir, Boolean ignoreErrors)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+   at Composite.Functions.Foundation.PluginFacades.FunctionProviderPluginFacade.Functions(String providerName)
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn, Boolean fireEvents)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeAllFunctions(FunctionTypesToReturn functionTypesToReturn, Boolean fireUpdateEvents)
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.Initialize_PostDataTypes()
+   at Composite.GlobalInitializerFacade.DoInitialize()
+   at Composite.GlobalInitializerFacade.InitializeTheSystem()
+
+20130506 13:47:47.7098 11 66 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 11 ended at 13:47:47:70 in process 5800
+20130506 13:48:39.4678 12 18 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 12 ended at 13:48:39:46 in process 5800
+20130506 13:51:11.3635 13 18 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 13 ended at 13:51:11:36 in process 5800
+20130506 14:08:21.4814 14 14 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 14 ended at 14:08:21:48 in process 5800
+20130506 14:08:21.9134 14 80 Critical GlobalInitializerFacade  BinDirChangeOrDirectoryRename
+20130506 14:08:21.9214 14 80 Critical GlobalInitializerFacade  System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Web.Compilation.BuildManager.BatchCompileWebDirectoryInternal(VirtualDirectory vdir, Boolean ignoreErrors)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+   at Composite.Functions.Foundation.PluginFacades.FunctionProviderPluginFacade.Functions(String providerName)
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn, Boolean fireEvents)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeAllFunctions(FunctionTypesToReturn functionTypesToReturn, Boolean fireUpdateEvents)
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.Initialize_PostDataTypes()
+   at Composite.GlobalInitializerFacade.DoInitialize()
+   at Composite.GlobalInitializerFacade.InitializeTheSystem()
+
+20130506 14:11:20.2236 15 38 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 15 ended at 14:11:20:22 in process 5800
+20130506 14:37:52.2537 16 15 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 16 ended at 14:37:52:25 in process 5800
+20130506 15:35:05.3951 17 60 Error FunctionWrapper  System.Xml.XmlException: The 'div' start tag on line 41 position 10 does not match the end tag of 'body'. Line 42, position 7.
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130506 15:37:12.0243 17 71 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 17 ended at 15:37:12:02 in process 5800
+20130506 15:37:19.1427 18 16 Warning ConsoleMessageServiceFacade  Console 'key1852498569060117' has a last known change numer of 390, but server current number is 1.
+20130506 15:45:49.8539 18 16 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 18 ended at 15:45:49:85 in process 5800
+20130506 15:47:43.0544 19 15 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 19 ended at 15:47:43:05 in process 5800
+20130506 15:52:57.8444 20 25 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 20 ended at 15:52:57:84 in process 5800
+20130506 15:54:06.2643 21 41 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 21 ended at 15:54:06:26 in process 5800
+20130506 16:01:45.6486 22  7 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 22 ended at 16:01:45:64 in process 5800
+20130506 16:03:33.5998 23 71 Information MimeTypeInfo  Uploading file 'hcm.jpg'. MIME type from extension: 'image/jpeg'
+20130506 16:03:44.4654 23 15 Information MimeTypeInfo  Uploading file 'sapa.jpg'. MIME type from extension: 'image/jpeg'
+20130506 16:19:20.6979 23 44 Error FunctionWrapper  System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , IImageFile )
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at ASP._Page_App_Data_Razor_My_Content_PlaceAside_cshtml.Execute() in d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceAside.cshtml:line 114
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130506 16:20:13.1469 23 32 Error FileBasedFunctionProvider  Error instantiating PlaceAside function
+20130506 16:20:13.1869 23 32 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceAside.cshtml(64): error CS0019: Operator '==' cannot be applied to operands of type 'System.Guid' and 'string'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130506 16:26:36.7169 23 44 Error FunctionWrapper  System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , IImageFile )
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at ASP._Page_App_Data_Razor_My_Content_PlaceAside_cshtml.Execute() in d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceAside.cshtml:line 93
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130506 16:28:26.9462 23 28 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 23 ended at 16:28:26:94 in process 5800

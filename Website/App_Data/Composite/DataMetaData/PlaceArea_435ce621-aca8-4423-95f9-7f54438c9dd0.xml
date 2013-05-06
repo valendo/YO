@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDescriptor dataTypeId="435ce621-aca8-4423-95f9-7f54438c9dd0" name="PlaceArea" namespace="My.Content" title="Place Areas" hasCustomPhysicalSortOrder="false" isCodeGenerated="true" cachable="false" labelFieldName="Title" typeManagerTypeName="My.Content.PlaceArea">
+  <DataAssociations />
+  <DataScopes>
+    <DataScopeIdentifier name="public" />
+  </DataScopes>
+  <KeyPropertyNames>
+    <KeyPropertyName name="Id" />
+  </KeyPropertyNames>
+  <SuperInterfaces>
+    <SuperInterface type="Composite.Data.ProcessControlled.IProcessControlled,Composite" />
+    <SuperInterface type="Composite.Data.ProcessControlled.ILocalizedControlled,Composite" />
+  </SuperInterfaces>
+  <Fields>
+    <DataFieldDescriptor id="f3c048de-1225-4c3d-ae7c-307b2d7e276d" name="Id" isNullable="false" position="-1" groupByPriority="0" inherited="false" instanceType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='Guid'" isReadOnly="false">
+      <FormRenderingProfile />
+      <ValidationFunctionMarkups />
+    </DataFieldDescriptor>
+    <DataFieldDescriptor id="5ae98d8c-737e-4d95-9190-c8346b3be0b4" name="Title" isNullable="false" position="0" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='String'Length='256'" isReadOnly="false" defaultValue="ValueType='String'Value=''">
+      <FormRenderingProfile label="Title" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.String.TextBox&quot; /&gt;" />
+      <ValidationFunctionMarkups />
+    </DataFieldDescriptor>
+    <DataFieldDescriptor id="40cc1fbc-47e8-401a-9986-b723ac8d4407" name="Order" isNullable="true" position="1" groupByPriority="0" inherited="false" instanceType="&lt;t n=&quot;System.Nullable`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" storeType="PhysicalStoreType='Integer'" isReadOnly="false">
+      <FormRenderingProfile label="Order" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.Integer.TextBox&quot; /&gt;" />
+      <TreeOrderingProfile orderPriority="1" orderDescending="false" />
+    </DataFieldDescriptor>
+  </Fields>
+</DataTypeDescriptor>

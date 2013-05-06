@@ -1,0 +1,217 @@
+﻿/*------------------------------------------
+---------------NAVIGATION-------------------
+------------------------------------------*/
+
+#navigation 
+{
+    width:100%;
+    margin-top:388px;
+    margin-bottom:30px;
+}
+
+    #navigation .nav 
+    {
+        width:225px;
+        height:290px;
+        float:left;
+        margin-right:20px;
+        position:relative;
+    }
+
+    #navigation .vietnam-local /* Remove margin right last child*/
+    {
+        margin-right:0px;
+    }
+
+        #navigation .nav .upper-content 
+        {
+            width:225px;
+            height:275px;
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 50%, #f5f5f5 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ffffff), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 50%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 50%,#f5f5f5 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 50%,#f5f5f5 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 50%,#f5f5f5 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+            position:absolute;
+            z-index:10;
+        }
+
+        #navigation .nav .nav-background-shadow       
+        {
+            background:url(/frontend/images/nav-shadow.png) no-repeat;
+            width:259px;
+            height:206px;
+            position:absolute;
+            z-index:1;
+            left:-17px;
+            top:10%;
+        }
+
+        #navigation .nav a 
+        {
+            color:#555;
+            font-size:12px;
+            text-decoration:none;
+            padding-left:30px;
+            display:block;
+        }
+
+            #navigation .nav a:hover 
+            {
+                color:#000;
+            }
+
+        #navigation .nav h1 
+        {
+            font-size:16px;
+            color:#fff;
+            text-transform:uppercase;
+            height:40px;
+            width:100%;
+            text-align:center;
+            line-height:40px;
+            font-weight:normal;
+        }
+
+        #navigation .nav ul 
+        {
+            margin-top:20px;
+            padding-left:25px;
+        }
+
+            #navigation .nav ul li {
+                height:35px;
+            }
+       
+
+.utility-zone h1{background:url(/frontend/images/navigation-bg.png) no-repeat top left;}
+.most-like-places h1{background:url(/frontend/images/navigation-bg.png) no-repeat top right;}
+.affordable h1{background:url(/frontend/images/navigation-bg.png) no-repeat bottom left;}
+.vietnam-local h1{background:url(/frontend/images/navigation-bg.png) no-repeat bottom right;}
+
+
+/*---------------UTILITY ZONE-----------------
+------------------------------------------*/
+
+.upper-content ul .yo-travel-planer{
+    background:url(/frontend/images/yo-travel-planner.png) no-repeat top left;
+    line-height:15px;
+}
+
+.upper-content ul .utiliti-zone-map{
+    background:url(/frontend/images/utility-zone-map.png) no-repeat top left;
+    line-height:15px;
+}
+
+.upper-content ul .utiliti-zone-hotel{
+    background:url(/frontend/images/utility-hotel.png) no-repeat top left;
+    line-height:15px;
+}
+
+.upper-content ul .utiliti-zone-restaurant{
+    background:url(/frontend/images/utility-restaurant.png) no-repeat top left;
+    line-height:15px;
+}
+
+
+/*------------MOST LIKE PLACES--------------
+------------------------------------------*/
+
+.most-like-places .upper-content ul {
+    background:url(/frontend/images/most-like-places.png) no-repeat;
+    margin-left:25px;
+    padding-left:0px !important;
+}
+
+.most-like-places .upper-content li {
+    line-height:25px;
+    height:38px !important;
+}
+
+.most-like-places .upper-content li a{
+    padding-left:35px !important;
+}
+
+
+
+/*------------------------------------------
+--------------------NEWS-------------------
+------------------------------------------*/
+
+
+#news-section 
+{
+    background:url(/frontend/images/news-border-top.png) repeat-x ;
+    margin-bottom:80px;
+}
+
+    #news-section .news-header 
+    {
+        padding:33px 0 0px 0px;
+        margin-bottom:50px;
+        font-size:22px;
+        color:#3e454c;
+        text-transform:uppercase;
+        display:block;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+        #news-section .news-header:hover
+        {
+            text-decoration:underline;
+        }
+
+
+    #news-section .news 
+    {
+        width:280px;
+        float:left;
+        padding:0 10px;
+        margin-right:30px;
+    }
+
+    #news-section .last-news 
+    {
+        margin-right:0px;
+    }
+
+    #news-section .news .news-title
+    {
+        font-size:14px;
+        color:#3E454C;
+        font-weight:bold;
+        display:block;
+        padding:20px 0px 10px 0px;
+        margin-bottom:15px;
+        border-bottom:1px solid #eaeaea;
+        word-break: normal;
+    }
+
+        #news-section .news .news-title:hover
+        {
+            text-decoration:none;
+        }
+
+        #news-section .news p 
+        {
+            font-size:11px;
+            color:#555;
+            line-height:20px;
+        }
+
+        #news-section .news .readmore-btn
+        {
+            float:right;
+            margin-top:10px;
+            cursor:pointer;
+        }
+    
+
+
+
+
+
