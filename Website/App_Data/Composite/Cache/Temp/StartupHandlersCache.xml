@@ -66,5 +66,10 @@
       <AssemblyName>TidyNet</AssemblyName>
       <LastModified>2013-04-11T10:57:28+07:00</LastModified>
     </AssemblyInfo>
+    <AssemblyInfo>
+      <SubscribedTypes />
+      <AssemblyName>Composite.Media.ImageCrop</AssemblyName>
+      <LastModified>2013-05-08T10:49:30.4101859+07:00</LastModified>
+    </AssemblyInfo>
   </Assemblies>
 </SubscribedTypesCache>

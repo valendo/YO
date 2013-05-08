@@ -1,0 +1,2 @@
+﻿20130508 10:21:12.2800 2  7 Warning ConsoleMessageServiceFacade  Console 'key4238227912126715' has a last known change numer of 268, but server current number is 1.
+20130508 10:21:12.6880 2  6 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 2 ended at 10:21:12:64 in process 24668

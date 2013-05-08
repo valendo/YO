@@ -66,6 +66,7 @@
 @if (isLanguages)
 {
     <div id="@NavigationId">
+	<p>@Resources.Function.SelectLanguage :</p>
     @if (!string.IsNullOrWhiteSpace(Description))
      {
 	    <span class="description">@Description</span>
@@ -107,7 +108,7 @@
 </html>
 @helper LinkElement(CultureInfo c, string url)
 {
-	<a href="@url" class="@c.Name" lang="@c.Name.Substring(0, c.Name.IndexOf("-"))">@CultureFormat(c)</a>
+	<a href="@url" class="@(c.Name == System.Threading.Thread.CurrentThread.CurrentCulture.Name ? "flagActive" : "")" lang="@c.Name.Substring(0, c.Name.IndexOf("-"))">@CultureFormat(c)</a>
 }
 @helper CultureFormat(CultureInfo c)
 {

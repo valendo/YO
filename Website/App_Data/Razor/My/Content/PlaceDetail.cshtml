@@ -3,7 +3,7 @@
 @functions {
     public override string FunctionDescription
     {
-        get  { return "Show place detail"; }
+        get { return "Show place detail"; }
     }
 
     string PathInfoString(int segment)
@@ -27,6 +27,15 @@
 
         return url.ToLower();
     }
+    
+    public static string TruncateAtWord(string input, int length)
+    {
+        if (input == null || input.Length < length)
+            return input;
+        int iNextSpace = input.LastIndexOf(" ", length);
+        return string.Format("{0}...", input.Substring(0, (iNextSpace > 0) ? iNextSpace : length).Trim());
+    }
+    
 }
 @{
     Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
@@ -34,6 +43,9 @@
     Guid areaId = Data.Get<My.Content.PlaceArea>().Where(t => GetUrlFromTitle(t.Title) == area).SingleOrDefault().Id;
     string title = PathInfoString(1);
     var place = Data.Get<My.Content.Place>().Where(t => t.Area == areaId && GetUrlFromTitle(t.Title) == title).SingleOrDefault();
+    var otherPlaces = Data.Get<My.Content.Place>().Where(t => t.Area == areaId && t.Id != place.Id).ToList();
+    
+    
 }
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -71,7 +83,7 @@
             <a href="" class="item selected">@place.Title</a>
         </div>*@
         <div id="vote">
-			@Html.C1().Function("Composite.Community.Facebook.LikeButton", new {LayoutStyle = "button_count"}) 
+			@Html.C1().Function("Composite.Community.Facebook.LikeButton", new { LayoutStyle = "button_count" }) 
         </div>
         <div class="post-header">
             <h1 class="post-title">
@@ -85,6 +97,28 @@
         <div class="content-detail">
             @Html.Raw(place.Content)
         </div>
-        <div class="recommend-section clearfix"></div>
+        <div class="recommend-section clearfix">
+            <h1 class="recommend-title">@Resources.Function.OtherPlaces</h1>
+            @foreach (var item in otherPlaces)
+            {
+                int index = otherPlaces.IndexOf(item) + 1;
+                string url = Html.C1().PageUrl(CurrentPageNode.Id.ToString()).ToString() +  "/" + area + "/" + GetUrlFromTitle(item.Title);
+                <div class="other-places-section clearfix">
+                    <a href="@url" class="other-pics">
+                        <img src="@(!string.IsNullOrEmpty(item.Image) ? Html.C1().MediaUrl(item.Image).ToString() : "/frontend/images/no_photo.jpg")"/>
+                    <span class="img-shadow"></span></a>
+                    <div class="right-detail">
+                        <a href="@url" class="other-places-title">@item.Title</a>
+                        <p class="teaster">@TruncateAtWord(item.Teaser, 100)</p>
+                        <a href="@url" class="readmore-btn">@Resources.Function.ReadMore</a>
+                    </div>
+                </div>
+                if(index % 2 == 0)
+                {
+                    <div style="clear:both;"></div>
+                }
+            }
+            <div style="clear:both;"></div>
+        </div>
     </body>
 </html>

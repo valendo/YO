@@ -3,28 +3,24 @@
 	<body>
 		<div id="header">
 			<div id="top-inside-header">
-				<a href="/" id="logo"><img src="/frontend/images/yologo.png" /></a> <!--END LOGO-->
-				<div id="language">
-					<p>Select Languge :</p>
-					<a class="flagActive"><img class="lang-flag" src="/frontend/images/eng-flag.png" /></a> 
-					<a><img class="lang-flag" src="/frontend/images/nor-flag.png" /></a> 
-					<a><img class="lang-flag" src="/frontend/images/vn-flag.png" /></a>
-				</div>
-
-<!--END LANGUAGE-->
+				<a href="/" id="logo"><img src="/frontend/images/yologo.png" /></a>
+		<!--END LOGO-->
+				<f:function name="Composite.Navigation.LanguageSwitcher" xmlns:f="http://www.composite.net/ns/function/1.0">
+					<f:param name="Mode" value="TranslatedOrHomePages" />
+					<f:param name="NavigationId" value="language" />
+					<f:param name="Format" value="Image" />
+				</f:function>
+				<!--END LANGUAGE-->
 				<div style="clear: both;"></div>
-
-<!--Clear fix-->
+				<!--Clear fix-->
 			</div>
-
-<!--END TOP HEADER-->
+	<!--END TOP HEADER-->
 			<div id="bot-inside-header">
-				<f:function xmlns:f="http://www.composite.net/ns/function/1.0" name="My.Navigation.MainMenu">
+				<f:function name="My.Navigation.MainMenu" xmlns:f="http://www.composite.net/ns/function/1.0">
 					<f:param name="PlaceDetailPage" value="664ae329-2548-4d6d-b404-91af0cf1c989" />
 				</f:function>
 			</div>
-
-<!--END BOT HEADER-->
+	<!--END BOT HEADER-->
 		</div>
 	</body>
 </html>

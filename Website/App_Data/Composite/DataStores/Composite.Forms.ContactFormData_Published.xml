@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContactFormDataElements>
+  <ContactFormData Name="vo thanh tai" Email="thanhtai_info@yahoo.com" Company="" Website="" Address="" PhoneNumber="" Subject="" Message="this is mail test" Date="2013-05-08T11:08:36.3107276+07:00" IP="127.0.0.1" Id="3d4e6a64-8ef8-4f9f-96b3-b8f2cfa29a23" PageId="f0d02685-4c99-4b59-91ab-a5d3af63cda2" />
+  <ContactFormData Name="tai vo" Email="thanhtai_info@yahoo.com" Company="" Website="" Address="" PhoneNumber="" Subject="" Message="just test mail" Date="2013-05-08T11:05:49.2661732+07:00" IP="127.0.0.1" Id="6a8610e8-05df-4127-b8c8-454f2edb8a78" PageId="f0d02685-4c99-4b59-91ab-a5d3af63cda2" />
+</ContactFormDataElements>

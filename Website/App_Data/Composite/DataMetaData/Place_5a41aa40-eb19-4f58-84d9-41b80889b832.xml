@@ -30,9 +30,11 @@
     </DataFieldDescriptor>
     <DataFieldDescriptor id="2f135f7d-d032-46c5-80a6-87c438576564" name="Content" isNullable="true" position="3" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='LargeString'" isReadOnly="false">
       <FormRenderingProfile label="Content" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.String.VisualXhtmlEditor&quot; /&gt;" />
-      <ValidationFunctionMarkups />
     </DataFieldDescriptor>
-    <DataFieldDescriptor id="b7f0a743-6b83-4aef-a392-2e97b499f6d9" name="Gallery" isNullable="true" position="4" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='LargeString'" isReadOnly="false">
+    <DataFieldDescriptor id="ebd5a6a2-091d-4e6d-a3be-c63d1c7e46bf" name="Image" isNullable="true" position="4" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='String'Length='2048'" isReadOnly="false" foreignKeyReferenceTypeName="Composite.Data.Types.IImageFile,Composite">
+      <FormRenderingProfile label="Image" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.ImageSelector&quot;&gt;&lt;f:param name=&quot;Required&quot; value=&quot;False&quot; /&gt;&lt;/f:widgetfunction&gt;" />
+    </DataFieldDescriptor>
+    <DataFieldDescriptor id="b7f0a743-6b83-4aef-a392-2e97b499f6d9" name="Gallery" isNullable="true" position="5" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='LargeString'" isReadOnly="false">
       <FormRenderingProfile label="Gallery" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.String.DataIdMultiSelector&quot;&gt;&lt;f:param name=&quot;OptionsType&quot; value=&quot;Composite.Data.Types.IMediaFileFolder,Composite&quot; /&gt;&lt;f:param name=&quot;CompactMode&quot; value=&quot;True&quot; /&gt;&lt;/f:widgetfunction&gt;" />
       <ValidationFunctionMarkups />
     </DataFieldDescriptor>

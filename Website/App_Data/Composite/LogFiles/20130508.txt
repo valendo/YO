@@ -1,0 +1,401 @@
+﻿20130508 10:21:01.6224 3  5 Warning AttributeBasedApplicationStartupHandler  Failed to open file 'D:\CompositeC1\YO\dev\Website\App_Data\Composite\Cache\Temp\StartupHandlersCache.xml'
+20130508 10:21:02.3864 3  5 Error AttributeBasedApplicationStartupHandler  System.IO.IOException: The process cannot access the file 'D:\CompositeC1\YO\dev\Website\App_Data\Composite\Cache\Temp\StartupHandlersCache.xml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at Composite.Plugins.Application.ApplicationStartupHandlers.AttributeBasedApplicationStartupHandler.AttributeBasedApplicationStartupHandler.GetCachedAssemblyInfo()
+20130508 10:43:01.2739 3 53 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 3 ended at 10:43:01:27 in process 24668
+20130508 10:49:30.5191 4 67 Information Composite.Localization.C1Console.FragmentInstaller  Start fixing Composite.config
+20130508 10:49:30.5761 4 67 Information Composite.Localization.C1Console.FragmentInstaller  Composite.config - fixed..
+20130508 10:49:31.9142 4 53 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 4 ended at 10:49:31:91 in process 24668
+20130508 11:05:17.9383 5 72 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 5 ended at 11:05:17:93 in process 24668
+20130508 11:05:21.4085 6 73 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 6 ended at 11:05:21:40 in process 24668
+20130508 11:05:52.1623 7 60 Error Composite.Forms.ContactForm  System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Composite.Forms.ContactForm.Functions.<Send>d__2.MoveNext()
+20130508 11:07:50.0750 7 25 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 7 ended at 11:07:50:07 in process 24668
+20130508 11:38:00.6136 8 50 Error FunctionWrapper  System.Xml.XmlException: 'class' is a duplicate attribute name. Line 8, position 39.
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 11:52:17.3136 8 29 Error FunctionWrapper  System.InvalidOperationException: Stack empty.
+   at System.Collections.Generic.Stack`1.Pop()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 12:13:55.6158 8 50 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 8 ended at 12:13:55:61 in process 24668
+20130508 13:11:31.3025 2  6 Warning ConsoleMessageServiceFacade  Console 'key149240178787728' has a last known change numer of 248, but server current number is 1.
+20130508 13:12:20.7703 2 36 Warning InstallRemotePackageWorkflow  System.ServiceModel.FaultException: Server was unable to process request. ---> Sequence contains more than one element
+
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Composite.Core.PackageSystem.WebServiceClient.PackagesSoap.RegisterPackageInstallationCompletion(RegisterPackageInstallationCompletionRequest request)
+   at Composite.Core.PackageSystem.PackageServerFacadeImpl.RegisterPackageInstallationCompletion(String packageServerUrl, Guid installationId, Guid packageId, String localUserName, String localUserIp)
+   at Composite.Plugins.Elements.ElementProviders.PackageElementProvider.InstallRemotePackageWorkflow.step4CodeActivity_Install_ExecuteCode(Object sender, EventArgs e)
+
+20130508 13:14:50.8209 2 36 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 2 ended at 13:14:50:82 in process 11448
+20130508 13:14:56.4742 3  8 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 3 ended at 13:14:56:47 in process 11448
+20130508 13:28:30.6138 4 13 Warning UninstallRemovePackageWorkflow  System.ServiceModel.FaultException: Server was unable to process request. ---> Sequence contains more than one element
+
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Composite.Core.PackageSystem.WebServiceClient.PackagesSoap.RegisterPackageUninstall(RegisterPackageUninstallRequest request)
+   at Composite.Core.PackageSystem.PackageServerFacadeImpl.RegisterPackageUninstall(String packageServerUrl, Guid installationId, Guid packageId, String localUserName, String localUserIp)
+   at Composite.Plugins.Elements.ElementProviders.PackageElementProvider.UninstallRemotePackageWorkflow.step2CodeActivity_Uninstall_ExecuteCode(Object sender, EventArgs e)
+
+20130508 13:42:48.5549 4  6 Error FunctionWrapper  System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_App_Data_Razor_My_Content_PlaceAside_cshtml.Execute() in d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceAside.cshtml:line 64
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 13:42:48.5979 4  6 Error FunctionWrapper  System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_App_Data_Razor_My_Content_PlaceDetail_cshtml.Execute() in d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml:line 34
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:10:10.2248 4 39 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 4 ended at 14:10:10:22 in process 11448
+20130508 14:10:21.6724 5 18 Warning ConsoleMessageServiceFacade  Console 'key149240178787728' has a last known change numer of 16, but server current number is 1.
+20130508 14:11:23.4890 5 55 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 5 ended at 14:11:23:48 in process 11448
+20130508 14:14:31.7427 6  6 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 6 ended at 14:14:31:74 in process 11448
+20130508 14:19:23.3164 7 36 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 7 ended at 14:19:23:31 in process 11448
+20130508 14:19:55.7333 8 51 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 8 ended at 14:19:55:73 in process 11448
+20130508 14:20:23.8849 9 39 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 9 ended at 14:20:23:88 in process 11448
+20130508 14:21:17.8780 10 36 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 10 ended at 14:21:17:87 in process 11448
+20130508 14:21:27.0875 11 51 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 11 ended at 14:21:27:08 in process 11448
+20130508 14:22:12.6441 12  6 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 12 ended at 14:22:12:64 in process 11448
+20130508 14:24:21.1514 13 49 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 13 ended at 14:24:21:15 in process 11448
+20130508 14:25:13.7725 14 55 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 14 ended at 14:25:13:77 in process 11448
+20130508 14:33:05.1624 15 42 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 15 ended at 14:33:05:16 in process 11448
+20130508 14:34:03.3967 16 44 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 16 ended at 14:34:03:39 in process 11448
+20130508 14:40:35.3702 17 30 Warning ActionLockingFacade  Failed to find entity token lock. EntityToken: entityTokenType='Composite\.Data\.DataEntityToken,Composite'entityToken='_dataId_=\'Id=\\\'a3055286-0e90-4b04-99dd-fb1a61dde0bf\\\'\'_dataIdType_=\'CompositeGenerated\\\.DynamicXmlDataProvider\\\.Composite_Data_Types_IPageDataId\'_interfaceType_=\'Composite\\\.Data\\\.Types\\\.IPage,Composite\'_dataScope_=\'administrated\'_localeScope_=\'en-US\''
+20130508 14:41:54.3717 17 15 Warning ActionLockingFacade  Failed to find entity token lock. EntityToken: entityTokenType='Composite\.Data\.DataEntityToken,Composite'entityToken='_dataId_=\'Id=\\\'a3055286-0e90-4b04-99dd-fb1a61dde0bf\\\'\'_dataIdType_=\'CompositeGenerated\\\.DynamicXmlDataProvider\\\.Composite_Data_Types_IPageDataId\'_interfaceType_=\'Composite\\\.Data\\\.Types\\\.IPage,Composite\'_dataScope_=\'administrated\'_localeScope_=\'vi-VN\''
+20130508 14:44:18.8209 17 30 Warning ConsoleMessageServiceFacade  Console 'key7998139366961351' are requesting messages that are more than 60 seconds old. Console has last known change number 51, server is now at 71. Debug XML dump saved at '~/App_Data/Composite/Cache/Temp'.
+20130508 14:44:55.5520 17 51 Error FunctionWrapper  System.InvalidOperationException: The type Resources.Localization could not be found
+   at Composite.Core.Types.TypeManagerImpl.GetType(String fullName)
+   at Composite.Plugins.ResourceSystem.PropertyResourceProvider.PropertyResourceProvider.GetStringValue(String stringId, CultureInfo cultureInfo)
+   at Composite.Plugins.ResourceSystem.AggregationLocalizationProvider.AggregationLocalizationProvider.GetString(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.Foundation.PluginFacades.ResourceProviderPluginFacade.GetStringValue(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.GetString(String section, String stringName, Boolean throwOnError)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.ParseString(String stringToParse)
+   at Composite.Core.Localization.LocalizationParser.HandleStringElement(XElement element)
+   at Composite.Core.Localization.LocalizationParser.Parse(XContainer container)
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.GetXslCompiledTransform()
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:45:05.3716 17 48 Error FunctionWrapper  System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_App_Data_Razor_My_Content_PlaceAside_cshtml.Execute() in d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceAside.cshtml:line 64
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:45:05.3746 17 48 Error FunctionWrapper  System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_App_Data_Razor_My_Content_PlaceDetail_cshtml.Execute() in d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml:line 34
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:45:09.5979 17  6 Error FunctionWrapper  System.InvalidOperationException: The type Resources.Localization could not be found
+   at Composite.Core.Types.TypeManagerImpl.GetType(String fullName)
+   at Composite.Plugins.ResourceSystem.PropertyResourceProvider.PropertyResourceProvider.GetStringValue(String stringId, CultureInfo cultureInfo)
+   at Composite.Plugins.ResourceSystem.AggregationLocalizationProvider.AggregationLocalizationProvider.GetString(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.Foundation.PluginFacades.ResourceProviderPluginFacade.GetStringValue(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.GetString(String section, String stringName, Boolean throwOnError)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.ParseString(String stringToParse)
+   at Composite.Core.Localization.LocalizationParser.HandleStringElement(XElement element)
+   at Composite.Core.Localization.LocalizationParser.Parse(XContainer container)
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.GetXslCompiledTransform()
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:51:00.2209 17  6 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 17 ended at 14:51:00:21 in process 11448
+20130508 14:51:22.9942 18 15 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 18 ended at 14:51:22:99 in process 11448
+20130508 14:51:39.5872 19 25 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 19 ended at 14:51:39:58 in process 11448
+20130508 14:53:57.1570 20 47 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 20 ended at 14:53:57:15 in process 11448
+20130508 14:56:29.4857 21 15 Error FunctionWrapper  System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at Composite.Plugins.ResourceSystem.PropertyResourceProvider.PropertyResourceProvider.GetStringValue(String stringId, CultureInfo cultureInfo)
+   at Composite.Plugins.ResourceSystem.AggregationLocalizationProvider.AggregationLocalizationProvider.GetString(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.Foundation.PluginFacades.ResourceProviderPluginFacade.GetStringValue(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.GetString(String section, String stringName, Boolean throwOnError)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.ParseString(String stringToParse)
+   at Composite.Core.Localization.LocalizationParser.HandleStringElement(XElement element)
+   at Composite.Core.Localization.LocalizationParser.Parse(XContainer container)
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.GetXslCompiledTransform()
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:57:09.9801 21 25 Error FunctionWrapper  System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at Composite.Plugins.ResourceSystem.PropertyResourceProvider.PropertyResourceProvider.GetStringValue(String stringId, CultureInfo cultureInfo)
+   at Composite.Plugins.ResourceSystem.AggregationLocalizationProvider.AggregationLocalizationProvider.GetString(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.Foundation.PluginFacades.ResourceProviderPluginFacade.GetStringValue(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.GetString(String section, String stringName, Boolean throwOnError)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.ParseString(String stringToParse)
+   at Composite.Core.Localization.LocalizationParser.HandleStringElement(XElement element)
+   at Composite.Core.Localization.LocalizationParser.Parse(XContainer container)
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.GetXslCompiledTransform()
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:57:50.9184 21  9 Error FunctionWrapper  System.FormatException: Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.String.Format(IFormatProvider provider, String format, Object[] args)
+   at Composite.Plugins.ResourceSystem.PropertyResourceProvider.PropertyResourceProvider.GetStringValue(String stringId, CultureInfo cultureInfo)
+   at Composite.Plugins.ResourceSystem.AggregationLocalizationProvider.AggregationLocalizationProvider.GetString(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.Foundation.PluginFacades.ResourceProviderPluginFacade.GetStringValue(String section, String stringId, CultureInfo cultureInfo)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.GetString(String section, String stringName, Boolean throwOnError)
+   at Composite.Core.ResourceSystem.StringResourceSystemFacade.ParseString(String stringToParse)
+   at Composite.Core.Localization.LocalizationParser.HandleStringElement(XElement element)
+   at Composite.Core.Localization.LocalizationParser.Parse(XContainer container)
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.GetXslCompiledTransform()
+   at Composite.Plugins.Functions.FunctionProviders.XsltBasedFunctionProvider.XsltBasedFunctionProvider.XsltXmlFunction.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 14:59:04.2296 21 48 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 21 ended at 14:59:04:22 in process 11448
+20130508 15:06:18.8554 22  9 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 22 ended at 15:06:18:85 in process 11448
+20130508 15:07:24.4012 23 23 Error FunctionWrapper  System.Xml.XmlException: 'lang' is an undeclared prefix. Line 7, position 6.
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 15:10:10.7367 23 57 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 23 ended at 15:10:10:73 in process 11448
+20130508 15:11:53.9096 24 44 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 24 ended at 15:11:53:90 in process 11448
+20130508 15:14:39.7071 25 15 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 25 ended at 15:14:39:70 in process 11448
+20130508 15:14:40.2861 25 16 Critical GlobalInitializerFacade  ResourcesDirChangeOrDirectoryRename
+20130508 15:14:40.3601 25 16 Critical GlobalInitializerFacade  System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Web.Compilation.BuildManager.BatchCompileWebDirectoryInternal(VirtualDirectory vdir, Boolean ignoreErrors)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+   at Composite.Functions.Foundation.PluginFacades.FunctionProviderPluginFacade.Functions(String providerName)
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn, Boolean fireEvents)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeAllFunctions(FunctionTypesToReturn functionTypesToReturn, Boolean fireUpdateEvents)
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.Initialize_PostDataTypes()
+   at Composite.GlobalInitializerFacade.DoInitialize()
+   at Composite.GlobalInitializerFacade.InitializeTheSystem()
+
+20130508 15:14:47.8636 26 34 Error FileBasedFunctionProvider  Error instantiating NewsList function
+20130508 15:14:47.8906 26 34 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\NewsList.cshtml(37): error CS0117: 'Resources.Function' does not contain a definition for 'tr'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 15:14:52.8228 26 45 Error FileBasedFunctionProvider  Error instantiating NewsList function
+20130508 15:14:52.8248 26 45 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\NewsList.cshtml(37): error CS0117: 'Resources.Function' does not contain a definition for 'tr'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 15:15:52.5553 26 30 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 26 ended at 15:15:52:55 in process 11448
+20130508 15:40:39.3213 27 48 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 27 ended at 15:40:39:32 in process 11448
+20130508 15:40:48.2648 28 15 Warning ConsoleMessageServiceFacade  Console 'key7350606641051797' has a last known change numer of 98, but server current number is 1.
+20130508 15:48:00.2435 28 48 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 28 ended at 15:48:00:24 in process 11448
+20130508 15:50:24.8128 29  6 Information MimeTypeInfo  Uploading file '1.jpg'. MIME type from extension: 'image/jpeg'
+20130508 15:50:48.5481 29 61 Information MimeTypeInfo  Uploading file '2.jpg'. MIME type from extension: 'image/jpeg'
+20130508 15:56:57.8163 29 67 Error FileBasedFunctionProvider  Error instantiating PlaceDetail function
+20130508 15:56:57.8733 29 67 Error FileBasedFunctionProvider  System.Web.HttpParseException (0x80004005): Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 15:57:06.2628 29 42 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Content.PlaceDetail' ---> System.Web.HttpParseException: Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   --- End of inner exception stack trace ---
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130508 15:57:06.2638 29 42 Error PageRenderer | INNER  System.Web.HttpParseException (0x80004005): Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130508 15:57:45.6970 29 52 Error FileBasedFunctionProvider  Error instantiating PlaceDetail function
+20130508 15:57:45.6980 29 52 Error FileBasedFunctionProvider  System.Web.HttpParseException (0x80004005): Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 15:57:47.9171 29 42 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Content.PlaceDetail' ---> System.Web.HttpParseException: Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   --- End of inner exception stack trace ---
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130508 15:57:47.9181 29 42 Error PageRenderer | INNER  System.Web.HttpParseException (0x80004005): Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130508 15:58:59.8732 29 15 Error FunctionWrapper  System.Xml.XmlException: The 'span' start tag on line 71 position 91 does not match the end tag of 'a'. Line 71, position 117.
+   at Composite.AspNet.Razor.RazorHelper.ExecuteRazorPage(String virtualPath, Action`1 setParameters, Type resultType)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+20130508 16:08:19.5983 29 18 Error FileBasedFunctionProvider  Error instantiating PlaceDetail function
+20130508 16:08:19.5993 29 18 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\5724e7d6\c4ae4a5e\App_Web_placedetail.cshtml.f659d399.ennxrzb5.0.cs(34): error CS1106: Extension method must be defined in a non-generic static class
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 16:08:22.8584 29 51 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Content.PlaceDetail' ---> System.Web.HttpCompileException: c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\5724e7d6\c4ae4a5e\App_Web_placedetail.cshtml.f659d399.ennxrzb5.0.cs(34): error CS1106: Extension method must be defined in a non-generic static class
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   --- End of inner exception stack trace ---
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130508 16:08:22.8594 29 51 Error PageRenderer | INNER  System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\5724e7d6\c4ae4a5e\App_Web_placedetail.cshtml.f659d399.ennxrzb5.0.cs(34): error CS1106: Extension method must be defined in a non-generic static class
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130508 16:08:43.6706 29 27 Error FileBasedFunctionProvider  Error instantiating PlaceDetail function
+20130508 16:08:43.6706 29 27 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml(31): error CS1105: Extension method must be static
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 16:08:45.7348 29 47 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Content.PlaceDetail' ---> System.Web.HttpCompileException: d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml(31): error CS1105: Extension method must be static
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   --- End of inner exception stack trace ---
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130508 16:08:45.7358 29 47 Error PageRenderer | INNER  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml(31): error CS1105: Extension method must be static
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130508 16:09:07.7310 29 62 Error FileBasedFunctionProvider  Error instantiating PlaceDetail function
+20130508 16:09:07.7320 29 62 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml(39): error CS1513: } expected
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 16:09:10.1792 29  9 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Content.PlaceDetail' ---> System.Web.HttpCompileException: d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml(39): error CS1513: } expected
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   --- End of inner exception stack trace ---
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130508 16:09:10.1802 29  9 Error PageRenderer | INNER  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\YO\dev\Website\App_Data\Razor\My\Content\PlaceDetail.cshtml(39): error CS1513: } expected
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130508 16:09:31.9314 29 19 Error FileBasedFunctionProvider  Error instantiating PlaceDetail function
+20130508 16:09:31.9324 29 19 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\5724e7d6\c4ae4a5e\App_Web_placedetail.cshtml.f659d399.xg7tothn.0.cs(34): error CS1106: Extension method must be defined in a non-generic static class
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130508 16:09:33.8645 29 47 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Content.PlaceDetail' ---> System.Web.HttpCompileException: c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\5724e7d6\c4ae4a5e\App_Web_placedetail.cshtml.f659d399.xg7tothn.0.cs(34): error CS1106: Extension method must be defined in a non-generic static class
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   --- End of inner exception stack trace ---
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130508 16:09:33.8655 29 47 Error PageRenderer | INNER  System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\5724e7d6\c4ae4a5e\App_Web_placedetail.cshtml.f659d399.xg7tothn.0.cs(34): error CS1106: Extension method must be defined in a non-generic static class
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130508 16:20:20.7105 29 30 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 29 ended at 16:20:20:70 in process 11448
+20130508 16:35:19.4499 30 71 Warning ConsoleMessageServiceFacade  Console 'key7350606641051797' has a last known change numer of 36, but server current number is 1.
+20130508 16:35:55.8100 30 21 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 30 ended at 16:35:55:80 in process 11448
+20130508 16:38:33.5300 2 22 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 2 ended at 16:38:33:52 in process 12948

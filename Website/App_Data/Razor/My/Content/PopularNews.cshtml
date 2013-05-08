@@ -31,7 +31,7 @@
     </head>
     <body>
         <div class="popular-news-section">
-            <p class="popular-news-header">Popular news</p>
+            <p class="popular-news-header">@Resources.Function.PopularNews</p>
             <ul>
                 @{
                     var news = Data.Get<My.Content.News>().Where(t => t.IsPopular == true).OrderByDescending(t => t.PublishDate).ToList();

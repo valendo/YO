@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="news-section">
-        <a href="@Html.C1().PageUrl("4dd9bf94-c843-4474-b74c-42f13d7a8faa")" class="news-header">LASTEST TRAVEL TOPICS</a>
+        <a href="@Html.C1().PageUrl("4dd9bf94-c843-4474-b74c-42f13d7a8faa")" class="news-header">@Resources.Function.LastestTravelTopics</a>
         @{
             var news = Data.Get<My.Content.News>().OrderByDescending(t => t.PublishDate).Take(3).ToList();
 
@@ -49,7 +49,7 @@
                         <p>
                             @item.Summary
                         </p>
-                        <a href="@url" class="readmore-btn">Read more</a>
+                        <a href="@url" class="readmore-btn">@Resources.Function.ReadMore</a>
                     </div>
                 }
             

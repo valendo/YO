@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataTypeDescriptor dataTypeId="ae2dcd1a-d68f-45cc-8f0a-a2d1775fc098" name="IXsltFile" namespace="Composite.Data.Types" hasCustomPhysicalSortOrder="false" isCodeGenerated="false" cachable="false" typeManagerTypeName="Composite.Data.Types.IXsltFile,Composite" buildNewHandlerTypeName="Composite.Data.Types.IFileBuildNewHandler,Composite">
+  <DataAssociations />
+  <DataScopes>
+    <DataScopeIdentifier name="public" />
+  </DataScopes>
+  <KeyPropertyNames />
+  <SuperInterfaces>
+    <SuperInterface type="Composite.Data.Types.IFile,Composite" />
+  </SuperInterfaces>
+  <Fields />
+</DataTypeDescriptor>

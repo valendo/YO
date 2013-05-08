@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageInstaller xmlns="http://www.composite.net/ns/management/packageinstaller/1.0">
+  <PackageFragmentUninstallers>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller,Composite">
+      <Files xmlns="">
+        <File filename="~\App_Data\Xslt\Composite\Forms\ContactForm.xsl" />
+        <File filename="~\App_Data\Composite\DynamicTypeForms\Composite\Forms\ContactForm\EmailTemplate.xml" />
+        <File filename="~\App_GlobalResources\Composite\Forms\ContactForm.resx" />
+        <File filename="~\App_GlobalResources\Composite\Forms\ContactForm.ru-RU.resx" />
+        <File filename="~\App_Data\Composite\TreeDefinitions\Composite.Forms.ContactForm.xml" />
+        <File filename="~\App_Data\Composite\TreeDefinitions\Composite.Forms.ContactFrom.EmailTemplate.xml" />
+        <File filename="~\App_Code\Composite\Forms\ContactForm\Functions.cs" />
+        <File filename="~\App_Data\Composite\DynamicTypeForms\Composite\Forms\ContactForm\EmailTemplate.xml" />
+        <File filename="~\Frontend\Composite\Forms\ContactForm\Scripts/contactform_validation.js" />
+        <File filename="~\Frontend\Composite\Forms\ContactForm\Styles.css" />
+      </Files>
+    </Add>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DynamicDataTypePackageFragmentUninstaller,Composite">
+      <Types xmlns="">
+        <Type typeId="7e22857e-fe84-41fd-a3a0-5db2845c09bf" />
+        <Type typeId="181e8089-7521-4ec5-a8f5-7ea19868bbb5" />
+      </Types>
+    </Add>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentUninstaller,Composite">
+      <Types xmlns="">
+        <Type type="Composite.Data.Types.IMethodBasedFunctionInfo,Composite" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="Id" value="38c67ff5-6d96-49d1-b402-63d34e360d35" />
+            </Keys>
+            <Keys>
+              <Key name="Id" value="d5bf57bc-76b4-4791-8559-024ae4bd22a0" />
+            </Keys>
+          </Datas>
+        </Type>
+        <Type type="Composite.Data.Types.IParameter,Composite" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="ParameterId" value="5dd7b419-fd3c-424e-923e-64e063bb1de2" />
+              <Key name="OwnerId" value="afa9e021-bed7-4ed8-90c5-d4d722dd8531" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="cf099cd4-ec38-4f48-b04f-6a87e1d83d72" />
+              <Key name="OwnerId" value="afa9e021-bed7-4ed8-90c5-d4d722dd8531" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="766c4a6c-6ee7-42a1-8b20-3584770ac564" />
+              <Key name="OwnerId" value="afa9e021-bed7-4ed8-90c5-d4d722dd8531" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="cf94a3c3-cf0c-404e-aa75-aca4194bfaca" />
+              <Key name="OwnerId" value="afa9e021-bed7-4ed8-90c5-d4d722dd8531" />
+            </Keys>
+          </Datas>
+        </Type>
+        <Type type="Composite.Data.Types.IXsltFunction,Composite" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="Id" value="afa9e021-bed7-4ed8-90c5-d4d722dd8531" />
+            </Keys>
+          </Datas>
+        </Type>
+        <Type type="Composite.Forms.ContactForm.EmailTemplate" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="Id" value="0f517e73-4b06-4904-949f-20c3ac0b8b1c" />
+            </Keys>
+            <Keys>
+              <Key name="Id" value="c42599a1-872d-4cce-bbf5-36ffdb266e51" />
+            </Keys>
+          </Datas>
+        </Type>
+      </Types>
+    </Add>
+  </PackageFragmentUninstallers>
+</PackageInstaller>
