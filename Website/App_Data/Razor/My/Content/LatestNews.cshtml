@@ -1,0 +1,61 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "Show top latest news"; }
+    }
+
+    [FunctionParameter(Label = "News Detail Page")]
+    public DataReference<IPage> NewsDetailPage { get; set; }
+
+    public static string GetUrlFromTitle(string title)
+    {
+        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        var generated = new System.Text.StringBuilder();
+
+        foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
+        {
+            generated.Append(c);
+        }
+
+        var url = generated.ToString().Replace(" ", "-");
+
+        return url.ToLower();
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+    <div id="news-section">
+        <a href="@Html.C1().PageUrl("4dd9bf94-c843-4474-b74c-42f13d7a8faa")" class="news-header">LASTEST TRAVEL TOPICS</a>
+        @{
+            var news = Data.Get<My.Content.News>().OrderByDescending(t => t.PublishDate).Take(3).ToList();
+
+            if (news.Count > 0)
+            {
+                foreach (var item in news)
+                {
+                    int i = news.IndexOf(item) + 1;
+                    string url = Html.C1().PageUrl(NewsDetailPage.Data).ToString() + "/" + item.PublishDate.ToString("yyyy") + "-" + @item.PublishDate.ToString("MM") + "-" + item.PublishDate.ToString("dd") + "/" + GetUrlFromTitle(item.Title);
+                    <div class="news @((i + 1) % 3 == 0 ? "last-news" : "")">
+                        <div class="news-img">
+                            <a href="@url">
+                                <img src="@Html.C1().MediaUrl(item.Image)" /></a>
+                        </div>
+                        <a href="@url" class="news-title">@item.Title</a>
+                        <p>
+                            @item.Summary
+                        </p>
+                        <a href="@url" class="readmore-btn">Read more</a>
+                    </div>
+                }
+            
+            }
+        }
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>

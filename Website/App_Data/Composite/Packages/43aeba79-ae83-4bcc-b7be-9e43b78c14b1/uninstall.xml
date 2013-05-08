@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageInstaller xmlns="http://www.composite.net/ns/management/packageinstaller/1.0">
+  <PackageFragmentUninstallers>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller,Composite">
+      <Files xmlns="">
+        <File filename="~\App_Data\Xslt\Composite\Community\Facebook\LikeButton.xsl" />
+      </Files>
+    </Add>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DynamicDataTypePackageFragmentUninstaller,Composite">
+      <Types xmlns="" />
+    </Add>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentUninstaller,Composite">
+      <Types xmlns="">
+        <Type type="Composite.Data.Types.INamedFunctionCall,Composite" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="XsltFunctionId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+              <Key name="Name" value="CurrentCulture" />
+            </Keys>
+            <Keys>
+              <Key name="XsltFunctionId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+              <Key name="Name" value="LoadUrl" />
+            </Keys>
+          </Datas>
+        </Type>
+        <Type type="Composite.Data.Types.IParameter,Composite" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="ParameterId" value="656add2e-a369-4bb9-9e82-e40a2b3a1748" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="bb56d92c-0f9a-4208-a5df-4e2b9fecc419" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="929cc5ce-807a-49d0-9fec-a786485b41fb" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="8c47c8a1-9f40-4209-a953-1df9cc12f117" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="48e3af7d-955e-4bb8-bfc7-56f37641f215" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="d759edda-d5ae-4a8a-ae4f-ac534264bb4b" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="94db5586-ae5b-453c-b820-66cd3a6ba1a7" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+            <Keys>
+              <Key name="ParameterId" value="7a8d8924-0aaf-4f52-b46c-183c30d6da49" />
+              <Key name="OwnerId" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+          </Datas>
+        </Type>
+        <Type type="Composite.Data.Types.IXsltFunction,Composite" dataScopeIdentifier="public">
+          <Datas>
+            <Keys>
+              <Key name="Id" value="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" />
+            </Keys>
+          </Datas>
+        </Type>
+      </Types>
+    </Add>
+  </PackageFragmentUninstallers>
+</PackageInstaller>

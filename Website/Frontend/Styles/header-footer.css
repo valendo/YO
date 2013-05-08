@@ -20,6 +20,7 @@ body
     background-size:100% auto;
     font-family:Tahoma , Arial , sans-serif;
     color:#555;
+    font-size:11px;
 }
 
 h1, h2, h3, h4, h5, h6 
@@ -199,7 +200,7 @@ ul.small-list-menu li.sub-li
             text-align:center;
         }
 
-            ul.top-menu li.top-li a.top-a:hover {
+            ul.top-menu li.top-li a.top-a:hover,ul.top-menu li.top-li a.top-a.active {
                 text-decoration:none;
                 color:#3E454C;
                 background:url(/frontend/images/selected-shape.png) no-repeat #f7f7f7 center bottom;

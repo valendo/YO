@@ -11,9 +11,6 @@
     [Placeholder(Id = "content", IsDefault = true)]
     public XhtmlDocument Content { get; set; }
 
-    [Placeholder(Id = "aside")]
-    public XhtmlDocument Aside { get; set; }
-
 	}
 @{
     Layout = "MasterLayout.cshtml";
@@ -24,105 +21,11 @@
 </head>
 <body>
     <div id="navigation">
-        <div class="nav utility-zone">
-            <div class="upper-content">
-                <h1>Utility Zone</h1>
-                <ul>
-                    <li class="yo-travel-planer"><a href="#">Yo Travel Planner</a></li>
-                    <li class="utiliti-zone-map"><a href="map.html">Map</a></li>
-                    <li class="utiliti-zone-hotel"><a href="#">Hotel</a></li>
-                    <li class="utiliti-zone-restaurant"><a href="#">Restaurant</a></li>
-                </ul>
-            </div>
-            <div class="nav-background-shadow"></div>
-        </div>
-
-        <div class="nav most-like-places">
-            <div class="upper-content">
-                <h1>Most like places</h1>
-                <ul>
-                    <li class="rank1"><a href="danang-detail.html">Da nang city</a></li>
-                    <li class="rank2"><a href="#">Ha long bay</a></li>
-                    <li class="rank3"><a href="#">Sapa </a></li>
-                    <li class="rank4"><a href="#">Phu quoc island</a></li>
-                    <li class="rank5"><a href="#">Hue city</a></li>
-                </ul>
-            </div>
-            <div class="nav-background-shadow"></div>
-        </div>
-
-        <div class="nav affordable">
-            <div class="upper-content">
-                <h1>Affordable Vietnam</h1>
-                <ul>
-                    <li><a href="#">See &amp; Experiences</a></li>
-                    <li><a href="#">Dinner</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Stay</a></li>
-                </ul>
-            </div>
-            <div class="nav-background-shadow"></div>
-        </div>
-
-        <div class="nav vietnam-local">
-            <div class="upper-content">
-                <h1>Vietnam in depth</h1>
-                <ul>
-                    <li><a href="#">Places</a></li>
-                    <li><a href="#">Experiences</a></li>
-                    <li><a href="#">Hidden</a></li>
-                    <li><a href="#">Eat</a></li>
-                </ul>
-            </div>
-            <div class="nav-background-shadow"></div>
-        </div>
-        <div style="clear: both;"></div>
-        <!--Clear fix-->
+        @PageTemplateFeature("HomeSpot")
     </div>
     <!--END NAVIGATION-->
     <div id="spacer"></div>
-    <div id="news-section">
-        <a href="news.html" class="news-header">LASTEST TRAVEL TOPICS</a>
-        <div class="news">
-            <div class="news-img">
-                <a href="">
-                    <img src="/frontend/images/news-img-1.jpg" /></a>
-            </div>
-            <a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies mattis nibh,
-                quis tincidunt nibh mollis quis.
-            </p>
-            <a hred="" class="readmore-btn">Readmore</a>
-        </div>
-
-        <div class="news">
-            <div class="news-img">
-                <a href="">
-                    <img src="/frontend/images/news-img-2.jpg" /></a>
-            </div>
-            <a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies mattis nibh,
-                quis tincidunt nibh mollis quis.
-            </p>
-            <a hred="" class="readmore-btn">Readmore</a>
-        </div>
-
-        <div class="news last-news">
-            <div class="news-img">
-                <a href="">
-                    <img src="/frontend/images/news-img-3.jpg" /></a>
-            </div>
-            <a href="" class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies mattis nibh,
-                quis tincidunt nibh mollis quis.
-            </p>
-            <a hred="" class="readmore-btn">Readmore</a>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
+    @Markup(Content)
     <!--END NEWS SECTION-->
 </body>
 </html>

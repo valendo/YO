@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormData>
+  <ContainerLabel />
+  <FormDefinition value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xD;&#xA;&lt;cms:formdefinition xmlns=&quot;http://www.composite.net/ns/management/bindingforms/std.ui.controls.lib/1.0&quot; xmlns:internal=&quot;http://www.composite.net/ns/management/bindingforms/internal.ui.controls.lib/1.0&quot; xmlns:f=&quot;http://www.composite.net/ns/management/bindingforms/std.function.lib/1.0&quot; xmlns:cms=&quot;http://www.composite.net/ns/management/bindingforms/1.0&quot;&gt;&#xD;&#xA;  &lt;cms:bindings&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;FeatureName&quot; type=&quot;System.String&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;Markup&quot; type=&quot;System.String&quot; /&gt;&#xD;&#xA;  &lt;/cms:bindings&gt;&#xD;&#xA;  &lt;cms:layout iconhandle=&quot;page-template-feature-edit&quot;&gt;&#xD;&#xA;    &lt;cms:layout.label&gt;&#xD;&#xA;      &lt;cms:read source=&quot;FeatureName&quot; /&gt;&#xD;&#xA;    &lt;/cms:layout.label&gt;&#xD;&#xA;    &lt;XhtmlEditor Label=&quot;Edit&quot;&gt;&#xD;&#xA;      &lt;cms:bind source=&quot;Markup&quot; /&gt;&#xD;&#xA;    &lt;/XhtmlEditor&gt;&#xD;&#xA;  &lt;/cms:layout&gt;&#xD;&#xA;&lt;/cms:formdefinition&gt;" />
+  <CustomToolbarDefinition />
+  <ContainerType>
+    <SerializerHandler value="SerializerHandlerType='Composite\.C1Console\.Actions\.StandardUiContainerTypesSerializerHandler,Composite'SerializedObject='Document'" />
+  </ContainerType>
+  <Bindings>
+    <Dictionary type="&lt;t n=&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;  &lt;t n=&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="FeatureName" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="HomeSpot" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Markup" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xA;&#x9;&lt;head&gt;&lt;/head&gt;&#xA;&#x9;&lt;body&gt;&#xA;&#x9;&#x9;&lt;div class=&quot;nav utility-zone&quot;&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;upper-content&quot;&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;Utility Zone&lt;/h1&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;ul&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li class=&quot;yo-travel-planer&quot;&gt;&lt;a href=&quot;~/page(fe3d8f5f-03a8-4179-8499-e27e435846cd)&quot;&gt;Yo Travel Planner&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li class=&quot;utiliti-zone-map&quot;&gt;&lt;a href=&quot;~/page(a025bc76-dc1d-4654-b2d0-8840039394a7)&quot;&gt;Map&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li class=&quot;utiliti-zone-hotel&quot;&gt;&lt;a href=&quot;~/page(751b5442-6630-4c94-800e-a56dc49beda2)&quot;&gt;Hotel&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li class=&quot;utiliti-zone-restaurant&quot;&gt;&lt;a href=&quot;~/page(70cda962-8ff7-48b1-b6c0-4432f950413a)&quot;&gt;Restaurant&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/ul&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;nav-background-shadow&quot;&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;div class=&quot;nav most-like-places&quot;&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;upper-content&quot;&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;Most like places&lt;/h1&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;f:function xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;My.Content.MostPlaces&quot;&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;f:param name=&quot;PlaceDetailPage&quot; value=&quot;664ae329-2548-4d6d-b404-91af0cf1c989&quot; /&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/f:function&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;nav-background-shadow&quot;&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;div class=&quot;nav affordable&quot;&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;upper-content&quot;&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;Affordable Vietnam&lt;/h1&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;ul&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(91078364-a5e8-4ed1-ae9f-af0acb7c366d)&quot;&gt;See &amp;amp; Experiences&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(49f32ea0-5163-42b6-8796-16d5ce310d96)&quot;&gt;Dinner&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(2aab32b0-13aa-4995-a7ef-be0eac0981db)&quot;&gt;Travel&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(78705ccb-8e28-4c41-bb05-b02c364fea51)&quot;&gt;Stay&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/ul&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;nav-background-shadow&quot;&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;div class=&quot;nav vietnam-local&quot;&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;upper-content&quot;&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;Vietnam in depth&lt;/h1&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;ul&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(4696e1f8-c67b-4a6b-ba42-8dc8df58c9a1)&quot;&gt;Places&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(9071f82b-0816-42c6-9ca9-95eb1b108a84)&quot;&gt;Experiences&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(0a9ef5ea-3582-4114-a811-77355a1bcda7)&quot;&gt;Hidden&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;~/page(990102f8-ab8c-4a97-b14f-15c764a85328)&quot;&gt;Eat&lt;/a&gt;&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/ul&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;nav-background-shadow&quot;&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;&#xA;&#xA;&lt;!--Clear fix--&gt;&#xA;&#x9;&lt;/body&gt;&#xA;&lt;/html&gt;" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Errors" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="" />
+        </Value>
+      </KeyPair>
+    </Dictionary>
+  </Bindings>
+  <BindingsValidationRules>
+    <Dictionary type="&lt;t n=&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;  &lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;    &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;  &lt;/t&gt;&#xD;&#xA;&lt;/t&gt;" />
+  </BindingsValidationRules>
+  <ExcludedEvents>
+    <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" />
+  </ExcludedEvents>
+</FormData>

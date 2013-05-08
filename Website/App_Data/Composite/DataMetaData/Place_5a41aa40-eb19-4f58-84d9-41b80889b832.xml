@@ -34,6 +34,7 @@
     </DataFieldDescriptor>
     <DataFieldDescriptor id="b7f0a743-6b83-4aef-a392-2e97b499f6d9" name="Gallery" isNullable="true" position="4" groupByPriority="0" inherited="false" instanceType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" storeType="PhysicalStoreType='LargeString'" isReadOnly="false">
       <FormRenderingProfile label="Gallery" helpText="" widgetFunctionMarkup="&lt;f:widgetfunction xmlns:f=&quot;http://www.composite.net/ns/function/1.0&quot; name=&quot;Composite.Widgets.String.DataIdMultiSelector&quot;&gt;&lt;f:param name=&quot;OptionsType&quot; value=&quot;Composite.Data.Types.IMediaFileFolder,Composite&quot; /&gt;&lt;f:param name=&quot;CompactMode&quot; value=&quot;True&quot; /&gt;&lt;/f:widgetfunction&gt;" />
+      <ValidationFunctionMarkups />
     </DataFieldDescriptor>
   </Fields>
 </DataTypeDescriptor>

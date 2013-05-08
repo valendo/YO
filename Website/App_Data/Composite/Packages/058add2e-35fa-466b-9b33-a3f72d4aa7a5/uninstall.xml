@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageInstaller xmlns="http://www.composite.net/ns/management/packageinstaller/1.0">
+  <PackageFragmentUninstallers>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller,Composite">
+      <Files xmlns="">
+        <File filename="~\App_Data\Composite\TreeDefinitions\Composite.Tools.XmlBasedSiteBackup.xml" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/bottom.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/bottomleft.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/bottomright.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/CompositeC1.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/left.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/right.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/top.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/topleft.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Images/topright.png" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\Styles.css" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\XmlBasedSiteBackup.aspx" />
+        <File filename="~\Composite\InstalledPackages\content\views\Composite.Tools.XmlBasedSiteBackup\XmlBasedSiteBackup.aspx.cs" />
+      </Files>
+    </Add>
+    <Add uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentUninstaller,Composite">
+      <Types xmlns="" />
+    </Add>
+  </PackageFragmentUninstallers>
+</PackageInstaller>

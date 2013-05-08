@@ -1,0 +1,57 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get  { return "Show news detail"; }
+    }
+
+    string PathInfoString(int segment)
+    {
+        string pathInfo = Composite.Core.Routing.Pages.C1PageRoute.GetPathInfo() ?? string.Empty;
+        string[] segments = pathInfo.Split('/');
+        return segments.Skip(segment + 1).FirstOrDefault();
+    }
+
+    public static string GetUrlFromTitle(string title)
+    {
+        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        var generated = new System.Text.StringBuilder();
+
+        foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
+        {
+            generated.Append(c);
+        }
+
+        var url = generated.ToString().Replace(" ", "-");
+
+        return url.ToLower();
+    }
+}
+@{
+    Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
+    string pubDate = PathInfoString(0);
+    string Title = PathInfoString(1);
+    DateTime PublishDate = new DateTime();
+    My.Content.News detail = null;
+    if (!string.IsNullOrEmpty(pubDate) && !string.IsNullOrEmpty(Title))
+    {
+        PublishDate = DateTime.Parse(PathInfoString(0));
+        detail = Data.Get<My.Content.News>().Where(t => t.PublishDate == PublishDate && GetUrlFromTitle(t.Title) == Title).FirstOrDefault();       
+    }
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>@detail.Title</title>
+    </head>
+    <body>
+        
+        @if (detail != null)
+        {
+            <h2 style="font-size:14px;">@detail.Title</h2>
+            <i>@detail.PublishDate.ToString("dd/MM/yyyy")</i>
+            <br /><br />
+            <div>@Html.Raw(detail.Content)</div>    
+        }
+    </body>
+</html>

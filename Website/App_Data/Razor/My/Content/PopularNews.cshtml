@@ -1,0 +1,47 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get  { return "Show popular news"; }
+    }
+
+    [FunctionParameter(Label = "News Detail Page")]
+    public DataReference<IPage> NewsDetailPage { get; set; }
+
+    public static string GetUrlFromTitle(string title)
+    {
+        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        var generated = new System.Text.StringBuilder();
+
+        foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
+        {
+            generated.Append(c);
+        }
+
+        var url = generated.ToString().Replace(" ", "-");
+
+        return url.ToLower();
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="~/Frontend/Styles/news.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="popular-news-section">
+            <p class="popular-news-header">Popular news</p>
+            <ul>
+                @{
+                    var news = Data.Get<My.Content.News>().Where(t => t.IsPopular == true).OrderByDescending(t => t.PublishDate).ToList();
+                    foreach (var item in news)
+                    {
+                        string url = Html.C1().PageUrl(NewsDetailPage.Data).ToString() + "/" + item.PublishDate.ToString("yyyy") + "-" + @item.PublishDate.ToString("MM") + "-" + item.PublishDate.ToString("dd") + "/" + GetUrlFromTitle(item.Title);
+                        <li><a href="@url" class="popular-news-item">@item.Title</a></li>
+                    }
+                }
+            </ul>
+        </div>
+    </body>
+</html>

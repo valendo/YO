@@ -1,0 +1,17 @@
+.page_navigation a, .alt_page_navigation a{
+	padding:3px 10px;
+	margin:2px;
+	color:white;
+	text-decoration:none;
+	float: left;
+	font-family: Tahoma;
+	font-size: 12px;
+	background-color:#0099FF;
+}
+.active_page{
+	background-color:#696969 !important;
+}
+.page_navigation
+{
+    float:right;
+}

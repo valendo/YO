@@ -1,4 +1,4 @@
-@inherits RazorFunction
+ï»¿@inherits RazorFunction
 
 @functions {
     public override string FunctionDescription
@@ -15,7 +15,7 @@
 
     public static string GetUrlFromTitle(string title)
     {
-        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        const string autoRemoveChars = @",./\?#!""@+'`ï¿½*():;$%&=ï¿½ï¿½";
         var generated = new System.Text.StringBuilder();
 
         foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
@@ -28,9 +28,18 @@
         return url.ToLower();
     }
 }
+@{
+    Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
+    string area = PathInfoString(0);
+    Guid areaId = Data.Get<My.Content.PlaceArea>().Where(t => GetUrlFromTitle(t.Title) == area).SingleOrDefault().Id;
+    string title = PathInfoString(1);
+    var place = Data.Get<My.Content.Place>().Where(t => t.Area == areaId && GetUrlFromTitle(t.Title) == title).SingleOrDefault();
+}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+    
     <head>
+        <title>@place.Title</title>
         <link href="/frontend/scripts/fancybox/css/jquery.fancybox.css" rel="stylesheet" />
         <link href="/frontend/styles/places-detail.css" rel="stylesheet" />
         <link href="/frontend/styles/header-footer.css" rel="stylesheet" />
@@ -55,21 +64,14 @@
         </script>
     </head>
     <body>
-        @{
-            Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
-            string area = PathInfoString(0);
-            Guid areaId = Data.Get<My.Content.PlaceArea>().Where(t => GetUrlFromTitle(t.Title) == area).SingleOrDefault().Id;
-            string title = PathInfoString(1);
-            var place = Data.Get<My.Content.Place>().Where(t => t.Area == areaId && GetUrlFromTitle(t.Title) == title).SingleOrDefault();
-            
-        }
+        
         @*<div id="breadcrumb">
             <a href="" class="item normal">places to go</a>
             <span> > </span>
             <a href="" class="item selected">@place.Title</a>
         </div>*@
         <div id="vote">
-            <a href="">32 peoples like this place</a>
+			@Html.C1().Function("Composite.Community.Facebook.LikeButton", new {LayoutStyle = "button_count"}) 
         </div>
         <div class="post-header">
             <h1 class="post-title">

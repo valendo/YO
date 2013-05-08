@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XsltFunctionElementsElements>
   <XsltFunctionElements Id="91592040-2f83-4c5c-8a81-788e6b454a9e" Name="Menu" Namespace="Layout.Navigation" Description="" OutputXmlSubType="XHTML" XslFilePath="\Layout\Navigation\Menu.xsl" />
+  <XsltFunctionElements Id="bd7eb08f-9d5f-40f1-8d10-983626de4ab9" Name="LikeButton" Namespace="Composite.Community.Facebook" Description="Adds the Like button to a page for users to share content with their Facebook friends." OutputXmlSubType="XHTML" XslFilePath="\Composite\Community\Facebook\LikeButton.xsl" />
   <XsltFunctionElements Id="e2a81fd2-4f73-4152-bf2a-a257426e2401" Name="TopLinks" Namespace="Layout.Navigation" Description="" OutputXmlSubType="XHTML" XslFilePath="\Layout\Navigation\TopLinks.xsl" />
 </XsltFunctionElementsElements>

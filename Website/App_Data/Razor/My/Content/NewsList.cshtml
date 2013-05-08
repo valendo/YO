@@ -1,0 +1,90 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "Show news list"; }
+    }
+
+    [FunctionParameter(Label = "News Detail Page")]
+    public DataReference<IPage> NewsDetailPage { get; set; }
+
+    public static string GetUrlFromTitle(string title)
+    {
+        const string autoRemoveChars = @",./\?#!""@+'`´*():;$%&=¦§";
+        var generated = new System.Text.StringBuilder();
+
+        foreach (var c in title.Where(c => autoRemoveChars.IndexOf(c) == -1))
+        {
+            generated.Append(c);
+        }
+
+        var url = generated.ToString().Replace(" ", "-");
+
+        return url.ToLower();
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="~/Frontend/Styles/news.css" rel="stylesheet" />
+    <link href="~/Frontend/Styles/pajinate.css" rel="stylesheet" />
+    <script src="~/Frontend/Scripts/jquery.pajinate.js"></script>
+
+</head>
+<body>
+    <div class="top-heading">
+        <h1>Travel news</h1>
+        <p class="teaster">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                vel mollis orci. Morbi ut leo vel sem laoreet sagittis. Nunc porttitor augue
+            vel
+                libero luctus quis facilisis magna egestas. Integer iaculis diam nec ante venenatis
+            a volutpat nulla consectetur.
+        </p>
+    </div>
+    <div class="news-section clearfix">
+    @{
+        var news = Data.Get<My.Content.News>().OrderByDescending(t => t.PublishDate).ToList();
+
+        if (news.Count > 0)
+        {
+            <ul class="content">
+            @foreach (var item in news)
+            {
+                int i = news.IndexOf(item) + 1;
+                string url = Html.C1().PageUrl(NewsDetailPage.Data).ToString() + "/" + item.PublishDate.ToString("yyyy") + "-" +  @item.PublishDate.ToString("MM") + "-" + item.PublishDate.ToString("dd") + "/" + GetUrlFromTitle(item.Title);
+                <li>
+                <div class="news-block clearfix">
+                    <a href="@url" class="news-pics">
+                        <img src="@Html.C1().MediaUrl(item.Image)" width="205" /><span class="img-shadow"></span></a>
+                    <div class="news-detail">
+                        <a href="@url" class="news-title">@item.Title</a>
+                        <p class="teaster">
+                            @item.Summary
+                        </p>
+                        <a href="@url" class="readmore-btn">Read more</a>
+                    </div>
+                </div>
+                </li>
+            }
+            </ul>	
+            <div class="page_navigation"></div>
+        }
+    }
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.news-section').pajinate({
+                items_per_page: 3,
+                num_page_links_to_display: 5,
+                nav_label_first: '&lt;&lt;',
+                nav_label_last: '&gt;&gt;',
+                nav_label_prev: '&lt;',
+                nav_label_next: '&gt;'
+            });
+        });
+    </script>
+</body>
+</html>
